@@ -2,14 +2,15 @@
   "name": "Copa 2026: Álbum de Figurinhas",
   "short_name": "Copa 2026",
   "description": "Gerencie sua coleção Panini da Copa do Mundo 2026",
-  "start_url": "/",
+  "start_url": "/copa2026/",
+  "scope": "/copa2026/",
   "display": "standalone",
   "background_color": "#070d14",
   "theme_color": "#070d14",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/icon_1024.png",
+      "src": "/copa2026/icon_1024.png",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any maskable"
