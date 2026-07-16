@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Copa 2026" />
-  <meta name="theme-color" content="#070d14" />
+  <head>
+    <meta charset="UTF-8" />
 
-  <link rel="apple-touch-icon" href="/copa2026/icon_1024.png" />
-  <link rel="manifest" href="/copa2026/manifest.json" />
+    <!-- viewport-fit=cover É OBRIGATÓRIO para safe-area funcionar no iPhone -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <title>Copa 2026</title>
+    <!-- PWA / iPhone -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Copa 2026" />
+    <meta name="theme-color" content="#070d14" />
 
-  <style>
-    html, body, #root {
-      margin: 0; padding: 0;
-      background: #070d14;
-      height: 100%;
-    }
-  </style>
-  <script type="module" crossorigin src="/copa2026/assets/index-DILNdkJU.js"></script>
-</head>
-<body>
-  <div id="root"></div>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/copa2026/sw.js');
-      });
-    }
-  </script>
-</body>
+    <title>Copa 2026 — Álbum Panini</title>
+    <link rel="apple-touch-icon" href="/icon.png" />
+    <link rel="manifest" href="/copa2026/manifest.json" />
+
+    <style>
+      *, *::before, *::after { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #070d14;
+        /* Garante que o app ocupa toda a tela incluindo área do notch */
+        height: 100%;
+        overflow: hidden;
+      }
+      #root {
+        height: 100dvh;
+        overflow: hidden;
+      }
+    </style>
+    <script type="module" crossorigin src="/copa2026/assets/index-DqefW6o2.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
